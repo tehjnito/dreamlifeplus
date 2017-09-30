@@ -4,7 +4,6 @@ body{
     width:100%;height:auto;
     color:#555;
     background-color:rgba(255, 108, 168,0.08);
-    height: 2000px;
 }
 a:hover{
     cursor: pointer;
@@ -73,8 +72,20 @@ small, .small{
 .bg-pink{
     background-color:  rgba(255, 108, 168,1);    
 }
+.bg-yellow{
+    background-color: #F1C40F; 
+}
 .bg-trans{
     background-color: transparent !important;
+}
+.btn-white{
+    color: #555;
+    background-color: #FFF;
+}
+.btn-white:focus,
+.btn-white:hover{
+    color: #555;
+    background-color: #fafafa;
 }
 
 textarea:focus, textarea.form-control:focus, input.form-control:focus, input[type=text]:focus, input[type=password]:focus, input[type=email]:focus, input[type=number]:focus, [type=text].form-control:focus, [type=password].form-control:focus, [type=email].form-control:focus, [type=tel].form-control:focus, [contenteditable].form-control:focus, select:focus, select.form-control:focus{
@@ -274,6 +285,16 @@ textarea:focus, textarea.form-control:focus, input.form-control:focus, input[typ
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
+}
+
+footer{
+    position:relative;
+    clear: both;
+    float: left;
+    top:0;left:0;
+    width:100%;height:auto;
+    min-height:300px;
+    background-color: #3b3b3b;
 }
 
 /*source.unsplash.com/random?city*/
