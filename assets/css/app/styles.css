@@ -70,6 +70,9 @@ small, .small{
 .text-white{
     color:#FFF;
 }
+.bg-pink{
+    background-color:  rgba(255, 108, 168,1);    
+}
 .bg-trans{
     background-color: transparent !important;
 }
@@ -179,6 +182,8 @@ textarea:focus, textarea.form-control:focus, input.form-control:focus, input[typ
     background-color:#F1C40F;
 }
 #Services-Section{
+    /*border-top: 10px solid rgba(255, 108, 168,1);
+    border-bottom: 10px solid rgba(255, 108, 168,1);*/
     background-image: url('../../img/photo-city.jpg');
     background-position:center;
     background-size: cover;
@@ -237,6 +242,38 @@ textarea:focus, textarea.form-control:focus, input.form-control:focus, input[typ
 #Services-Section ul > li:first-child:after{
     content: none;
     display: none;
+}
+
+.feature-section{
+    padding: 0 !important;
+    margin: 0 !important;
+    height:100vh;
+}
+.feature-section > span{
+    position: relative;
+    height:100%;
+    padding:0;
+}
+.feature-section > span:first-child{
+    height: 150px;
+}
+.feature-section .title{
+    position: absolute;
+    top:50px;left:50%;
+    transform: translateX(-50%);
+    font-size: 40px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.feature-section .img-section{
+    position: relative;
+    float:left;
+    top:0;left:0;
+    width:100%;height:100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 /*source.unsplash.com/random?city*/
