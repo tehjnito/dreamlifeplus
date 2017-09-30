@@ -1,0 +1,204 @@
+body{
+    position: relative;
+    top:0;left:0;
+    width:100%;height:auto;
+    color:#555;
+    background-color:rgba(255, 108, 168,0.055);
+    height: 2000px;
+}
+a:hover{
+    cursor: pointer;
+}
+.pointer,
+[data-toggle="collapse"]{
+    cursor:pointer !important;
+}
+small, .small{
+    font-size:80%;
+}
+.requiredinput:after{
+    position:absolute;
+    top:0;right:0;
+    display:inline !important;
+    content:'*' !important;
+    color:#F00;
+}
+.no-resize{
+    resize: none;
+}
+.row{
+    margin-right: 0;
+    margin-left: 0;
+}
+.clearfix{
+    clear:both !important;
+}
+.hover-underline{
+    text-decoration: underline;
+}
+.alert{
+    border-radius:0;
+}
+.no-padding{
+    padding: 0 !important;
+}
+.no-shadow{
+    -webkit-box-shadow: none !important;
+    -moz-box-shadow: none !important;
+    -o-box-shadow: none !important;
+    box-shadow: none !important;
+}
+.not-rounded{
+    border-radius:0px !important;
+}
+.center{
+    float: none !important;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.center-forced{
+    top:50%;left:50%;
+    transform: translate(-50%,-50%);
+}
+.text-underline{
+    text-decoration: underline;
+}
+.text-italic{
+    font-style: italic;
+}
+.text-white{
+    color:#FFF;
+}
+.bg-trans{
+    background-color: transparent !important;
+}
+
+textarea:focus, textarea.form-control:focus, input.form-control:focus, input[type=text]:focus, input[type=password]:focus, input[type=email]:focus, input[type=number]:focus, [type=text].form-control:focus, [type=password].form-control:focus, [type=email].form-control:focus, [type=tel].form-control:focus, [contenteditable].form-control:focus, select:focus, select.form-control:focus{
+    -webkit-box-shadow: inset 0 -2px 0 #2ecc71;
+    -moz-box-shadow: inset 0 -2px 0 #2ecc71;
+    box-shadow: inset 0 -2px 0 #2ecc71;
+}
+.rot-45{
+    transform: rotateZ(45deg);
+}
+
+#body-wrapper{
+    position: relative;
+    width:100%;height:100%;
+    padding:0;
+    margin:0;
+}
+
+#Main-Navigation{
+    position: absolute;
+    top:0;left:0;
+    width:100%;height:auto;
+    background-color:rgba(0,0,0,0);
+    z-index: 99;
+}
+#Main-Navigation > :first-child{
+    height:65px;
+    padding:10px;
+}
+#Nav-Logo-Start{
+    position: relative;
+    width:100%;height:100%;
+}
+#Nav-Logo-Start > img{
+    position: relative;
+    max-width:100%;max-height:100%;
+    display: block;
+    margin:0 auto;
+}
+
+#Home-Page-Hero{
+    position: relative;
+    top:0;left:0;
+    width:100%;height:100vh;
+    /*background-color:rgba(255, 108, 168,1);*/
+    overflow:hidden;
+}
+#Home-Page-Hero > :first-child{
+    height: 100%;
+}
+[data-zoom-fade-show] > *{
+    position: absolute;
+    top:0;left:0;
+    width:100%;height:100%;
+    background-position:center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition-duration: 2s;
+    transform: scale(1);
+    opacity:1;
+}
+[data-zoom-fade-show] > :last-child{
+    transition: all linear 20s;
+    transform: scale(1.1);
+    opacity: 0.1;
+}
+
+.page-section{
+    padding: 40px 20px;
+}
+.Section-Title{
+    text-align: center;
+    text-transform:uppercase;
+    font-weight: 900;
+    /*font-family: 'Poppins', sans-serif;*/
+}
+.Section-Title ~ hr{
+    position: relative;
+    top:0;
+    width:70px;height:3px;
+    margin:0 auto;
+    background-color:#F1C40F;
+}
+#services-Section{
+    background-position:center;
+    background-attachment: fixed;
+}
+#services-Section > .tint{
+    position: absolute;
+    top:0;left:0;
+    width:100%;height:100%;
+    background-color: #F1C40F;
+    opacity: 0.3;
+}
+
+
+
+
+
+
+@media only screen and (max-width : 1200px) {
+
+}
+
+/* Extra Small Devices, Phones */ 
+@media only screen and (min-width : 480px) {
+    .list-content-masonary{
+        column-count: 2;
+        column-gap: 1em;
+    }
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+    .list-content-masonary{
+        column-count: 3;
+        column-gap: 1em;
+    }
+}
+
+/* Medium Devices, Desktops */
+@media (min-width: 992px) {
+    .list-content-masonary{
+        column-count: 4;
+        column-gap: 1em;
+    }
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) {}
