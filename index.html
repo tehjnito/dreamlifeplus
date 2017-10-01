@@ -21,11 +21,26 @@
 
     </head>
     <body>
-        <nav id="Main-Navigation">
+        <nav id="Main-Navigation" class="headroom">
             <span class="col-xs-12 col-md-4">
                 <span id="Nav-Logo-Start" class="col-xs-12 no-padding">
                     <img src="./assets/img/drawables/sample-logo.png">
                 </span>
+            </span>
+            <span class="col-xs-12 col-md-offset-4 col-md-4 hidden-xs hidden-sm">
+                <ul id="Main-Navigation-Links">
+                    <li class="active"><a href="">Home</a></li>
+                    <li class=""><a href="">Galley</a></li>
+                    <li class=""><a href="">About/Contact</a></li>
+                </ul>
+            </span>
+            <span class="col-xs-12 no-padding visible-xs visible-sm">
+                <a id="mobile-menu-toggle" data-toggle="collapse" data-target="#mobile-menu" class="btn-link btn-block text-center"><i style="transform:translateY(0px);" class="fa fa-border fa-2x fa-bars"></i></a>
+                <ul id="mobile-menu" class="clearfix col-xs-12 collapse">
+                    <li class="active"><a href=""><i class="fa fa-fw fa-minus"></i>&nbsp;Home</a></li>
+                    <li class=""><a href=""><i class="fa fa-fw fa-minus"></i>&nbsp;Gallery</a></li>
+                    <li class=""><a href=""><i class="fa fa-fw fa-minus"></i>&nbsp;About/Contact</a></li>
+                </ul>
             </span>
         </nav>
         <section id="body-wrapper" class="row">
@@ -33,7 +48,7 @@
                 <section class="col-xs-12 no-padding" data-zoom-fade-show data-change-speed="20000">
                     <span style="background-image:url('https://source.unsplash.com/random?tree')"></span>
                     <span style="background-image:url('https://source.unsplash.com/random?car')"></span>
-                    <span class="active" style="background-image:url('https://source.unsplash.com/random?plane')"></span>
+                    <span class="active" style="background-image:url('./assets/img/Wedding-Couple-HD-Photography.jpg')"></span>
                 </section>
                 <section class="col-xs-12">
                     <span id="Hero-Title">
@@ -133,6 +148,8 @@
         <script type="text/javascript" src="assets/js/vendor/jquery-1.9.1.min.js"></script>
         <script type="text/javascript" src="assets/js/vendor/bootstrap.min.js"></script>
         <script type="text/javascript" src="assets/js/vendor/jquery.initialize.min.js"></script>
+        <script type="text/javascript" src="assets/js/vendor/jQuery.headroom.min.js"></script>
+        <script type="text/javascript" src="assets/js/vendor/headroom.min.js"></script>
         <script type="text/javascript" src="assets/js/app/main.js"></script>
         <script type="text/javascript" src="assets/js/app/simple-fade-show.js"></script>
 
