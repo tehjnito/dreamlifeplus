@@ -287,8 +287,8 @@ small, .small{
 }
 #Home-Page-Hero #Hero-Title > *{
     text-align: center;
-    font-size:80px;
-    font-weight: 900;
+    font-size:30px;
+    font-weight: 400;
     color: #FFF;
     text-transform: uppercase;
     text-shadow: 0px 0px 5px rgba(0,0,0,0.2);
@@ -612,6 +612,10 @@ footer{
 
 /* Medium Devices, Desktops */
 @media (min-width: 992px) {
+    #Home-Page-Hero #Hero-Title > *{
+        font-size:80px;
+        font-weight: 900;
+    }
     .list-content-masonary{
         column-count: 4;
         /*column-gap: 1em;*/
