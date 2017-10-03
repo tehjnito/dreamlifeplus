@@ -90,15 +90,39 @@ small, .small{
 }
 .btn-white:focus,
 .btn-white:hover{
-    color: #555;
+    color: #555;    
     background-color: #fafafa;
 }
+.bootstrap-select{
+    padding: 0 !important;
+    margin-bottom:8px !important;
+}
+.bootstrap-select > .btn,
+.bootstrap-select .dropdown-menu{
+    -moz-box-shadow: 0 1px 2px rgba(0,0,0,0.07);
+    -webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.07);
+    box-shadow: 0 1px 2px rgba(0,0,0,0.07);
+    border-radius:3px;
+}
+.btn.btn-default{
+    color:#555;
+    background-color:#FFF;
+    border: 0;
+}
+.btn-default:active, .btn-default.active, .open>.dropdown-toggle.btn-default,
+.btn-default:active:hover, .btn-default.active:hover, .open>.dropdown-toggle.btn-default:hover, .btn-default:active:focus, .btn-default.active:focus, .open>.dropdown-toggle.btn-default:focus, .btn-default:active.focus, .btn-default.active.focus, .open>.dropdown-toggle.btn-default.focus{
+    color:#555;
+    background-color: #FFF;
+}
+.bootstrap-select .dropdown-menu{
+    border-radius: 0px 0px 3px 3px;
+}
 
-textarea:focus, textarea.form-control:focus, input.form-control:focus, input[type=text]:focus, input[type=password]:focus, input[type=email]:focus, input[type=number]:focus, [type=text].form-control:focus, [type=password].form-control:focus, [type=email].form-control:focus, [type=tel].form-control:focus, [contenteditable].form-control:focus, select:focus, select.form-control:focus{
+/*textarea:focus, textarea.form-control:focus, input.form-control:focus, input[type=text]:focus, input[type=password]:focus, input[type=email]:focus, input[type=number]:focus, [type=text].form-control:focus, [type=password].form-control:focus, [type=email].form-control:focus, [type=tel].form-control:focus, [contenteditable].form-control:focus, select:focus, select.form-control:focus{
     -webkit-box-shadow: inset 0 -2px 0 #2ecc71;
     -moz-box-shadow: inset 0 -2px 0 #2ecc71;
     box-shadow: inset 0 -2px 0 #2ecc71;
-}
+}*/
 .rot-45{
     transform: rotateZ(45deg);
 }
@@ -126,6 +150,9 @@ textarea:focus, textarea.form-control:focus, input.form-control:focus, input[typ
     background: -ms-linear-gradient(top, rgba(0,0,0,0.7) 0%, rgba(255,255,255,0) 90%);
     background: linear-gradient(to bottom, rgba(0,0,0,0.7) 0%, rgba(255,255,255,0) 90%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#ffffff', GradientType=0 );
+}
+.has-solid-banner #Main-Navigation{
+    background: none;
 }
 #Main-Navigation.headroom--not-bottom.headroom--not-top.headroom--pinned{
     position: fixed;
@@ -274,7 +301,7 @@ textarea:focus, textarea.form-control:focus, input.form-control:focus, input[typ
 }
 
 .page-section{
-    padding: 40px 20px;
+    padding: 40px 120px;
 }
 .Section-Title{
     text-align: center;
@@ -284,6 +311,14 @@ textarea:focus, textarea.form-control:focus, input.form-control:focus, input[typ
 }
 .Section-Title ~ hr{
     position: relative;
+    top:0;
+    width:70px;height:3px;
+    margin:0 auto;
+    background-color:#F1C40F;
+}
+.accent_underline ~ hr{
+    position: relative;
+    clear: both;
     top:0;
     width:70px;height:3px;
     margin:0 auto;
@@ -384,6 +419,108 @@ textarea:focus, textarea.form-control:focus, input.form-control:focus, input[typ
     background-attachment: fixed;
 }
 
+#page-big-banner{
+    position: relative;
+    float: left;
+    top:0;left:0;
+    width:100%;height:100vh;
+    min-height: 300px;max-height:400px;
+    background-color: rgba(255, 108, 168,0.3);
+    background-image: url('../../img/drawables/bg-001.png');
+}
+#page-big-banner h1{
+    position: relative;
+    float: left;
+    top:50%;left:0;
+    width:100%;height:auto;
+    transform: translateY(-50%);
+    text-align: center;
+    font-size: 60px;
+    text-transform: capitalize;
+    font-weight: 400;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom:20px;
+    /*color:#FFF;*/
+}
+#page-big-banner h1 ~ hr{
+    top:40%;
+}
+
+.list-content-masonary{
+    column-count: 2;
+    /*column-gap: 1em;*/
+}
+.list-content-masonary > *{
+    display: inline-block;
+    /*margin: 0 0 1em;*/
+    width: 100%;
+}
+
+.albumn-list{
+    position: relative;
+    float: left;
+    top:0;left:0;
+    width:100%;height:auto;
+    padding: 40px 0;
+}
+.albumn-list > a{
+    height: 400px;
+    margin-bottom: 20px;
+    padding:0 5px;
+    /*background-color: #F1C40F;
+    -moz-box-shadow: 0 1px 2px rgba(0,0,0,0.07);
+    -webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.07);
+    box-shadow: 0 1px 2px rgba(0,0,0,0.07);*/
+}
+.albumn-list > a > :first-child{
+    position: relative;
+    float: left;
+    top:0;left:0;
+    width:100%;height:100%;
+    max-height: 400px;
+    transition: all ease-in-out 0.1s;
+}
+.albumn-list > a > :first-child > figure{
+    position: relative;
+    top:0;left:0;
+    width:100%;height:300px;
+    background-position:center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: 5px solid transparent;
+    transition: all ease-in-out 0.1s;
+}
+.albumn-list > a:hover > :first-child > figure{
+    transition: all ease-in-out 0.1s;
+    /*transform: scale(0.99);*/
+    z-index: 90;
+    -moz-box-shadow: 0 1px 2px rgba(0,0,0,0.7);
+    -webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.7);
+    box-shadow: 0 1px 2px rgba(0,0,0,0.7);
+}
+.albumn-list > a:hover > :first-child > figure{
+    border-color: #555;
+    transition: all ease-in-out 0.1s;
+}
+.albumn-list > a > :first-child > figcaption{
+    position: relative;
+    top:0;left:0;
+    width:100%;height:auto;
+    padding:10px;
+    font-size: 16px;
+    color:#555;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+}
+.albumn-list > a:hover figcaption,
+.albumn-list > a:active figcaption,
+.albumn-list > a:visited figcaption,
+.albumn-list > a:focus figcaption{
+    color: #555;
+}
+
+
+
 footer{
     position:relative;
     clear: both;
@@ -397,18 +534,11 @@ footer{
 /*source.unsplash.com/random?city*/
 
 
-
-
-
-@media only screen and (max-width : 1200px) {
-
-}
-
 /* Extra Small Devices, Phones */ 
 @media only screen and (min-width : 480px) {
     .list-content-masonary{
         column-count: 2;
-        column-gap: 1em;
+        /*column-gap: 1em;*/
     }
 }
 
@@ -416,7 +546,7 @@ footer{
 @media only screen and (min-width : 768px) {
     .list-content-masonary{
         column-count: 3;
-        column-gap: 1em;
+        /*column-gap: 1em;*/
     }
 }
 
@@ -424,7 +554,7 @@ footer{
 @media (min-width: 992px) {
     .list-content-masonary{
         column-count: 4;
-        column-gap: 1em;
+        /*column-gap: 1em;*/
     }
 }
 
