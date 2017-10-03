@@ -15,6 +15,9 @@ a:hover{
 small, .small{
     font-size:80%;
 }
+.hide-overflow{
+    overflow:hidden;
+}
 .requiredinput:after{
     position:absolute;
     top:0;right:0;
@@ -142,17 +145,24 @@ small, .small{
     transition: all ease-in .05s;
     z-index: 99;
     transition:all ease-in-out 0.05s;
-    background: rgba(0,0,0,0.7);
-    background: -moz-linear-gradient(top, rgba(0,0,0,0.7) 0%, rgba(255,255,255,0) 90%);
-    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(0,0,0,0.7)), color-stop(90%, rgba(255,255,255,0)));
-    background: -webkit-linear-gradient(top, rgba(0,0,0,0.7) 0%, rgba(255,255,255,0) 90%);
-    background: -o-linear-gradient(top, rgba(0,0,0,0.7) 0%, rgba(255,255,255,0) 90%);
-    background: -ms-linear-gradient(top, rgba(0,0,0,0.7) 0%, rgba(255,255,255,0) 90%);
-    background: linear-gradient(to bottom, rgba(0,0,0,0.7) 0%, rgba(255,255,255,0) 90%);
+    background: rgba(0,0,0,0.4);
+    background: -moz-linear-gradient(top, rgba(0,0,0,0.4) 0%, rgba(255,255,255,0) 90%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(0,0,0,0.4)), color-stop(90%, rgba(255,255,255,0)));
+    background: -webkit-linear-gradient(top, rgba(0,0,0,0.4) 0%, rgba(255,255,255,0) 90%);
+    background: -o-linear-gradient(top, rgba(0,0,0,0.4) 0%, rgba(255,255,255,0) 90%);
+    background: -ms-linear-gradient(top, rgba(0,0,0,0.4) 0%, rgba(255,255,255,0) 90%);
+    background: linear-gradient(to bottom, rgba(0,0,0,0.4) 0%, rgba(255,255,255,0) 90%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#ffffff', GradientType=0 );
 }
 .has-solid-banner #Main-Navigation{
-    background: none;
+    background: rgba(0,0,0,0.2);
+    background: -moz-linear-gradient(top, rgba(0,0,0,0.2) 0%, rgba(255,255,255,0) 90%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(0,0,0,0.2)), color-stop(90%, rgba(255,255,255,0)));
+    background: -webkit-linear-gradient(top, rgba(0,0,0,0.2) 0%, rgba(255,255,255,0) 90%);
+    background: -o-linear-gradient(top, rgba(0,0,0,0.2) 0%, rgba(255,255,255,0) 90%);
+    background: -ms-linear-gradient(top, rgba(0,0,0,0.2) 0%, rgba(255,255,255,0) 90%);
+    background: linear-gradient(to bottom, rgba(0,0,0,0.2) 0%, rgba(255,255,255,0) 90%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#ffffff', GradientType=0 );
 }
 #Main-Navigation.headroom--not-bottom.headroom--not-top.headroom--pinned{
     position: fixed;
@@ -301,7 +311,8 @@ small, .small{
 }
 
 .page-section{
-    padding: 40px 120px;
+    padding-top: 120px;
+    padding-bottom: 120px;
 }
 .Section-Title{
     text-align: center;
@@ -398,7 +409,7 @@ small, .small{
     padding:0;
 }
 .feature-section > span:first-child{
-    height: 150px;
+    height: 200px;
 }
 .feature-section .title{
     position: absolute;
@@ -427,6 +438,7 @@ small, .small{
     min-height: 300px;max-height:400px;
     background-color: rgba(255, 108, 168,0.3);
     background-image: url('../../img/drawables/bg-001.png');
+    background-attachment: fixed;
 }
 #page-big-banner h1{
     position: relative;
@@ -521,6 +533,40 @@ small, .small{
 
 
 
+
+#tehj-video-player{
+    position: fixed;
+    top:0;left:0;
+    width:100vw;height:100vh;
+    overflow-y: auto;
+    display: none;
+    background-color:#000;
+    z-index: -1;
+}
+#tehj-video-player.open{
+    display: block;
+    z-index: 999;
+}
+#tehj-video-player > :first-child{
+    position: relative;
+    float: left;    
+    top:0;left:0;
+    width:100%;height:100%;
+}
+#tehj-video-player #fullsized_close{
+    position: absolute;
+    float: right;
+    top:0;right:0;
+}
+#tehj-video-player #video-start{
+    height:100%;
+}
+#tehj-video-player .embed-responsive{
+    width: 100%;
+    height: 100%;
+}
+
+
 footer{
     position:relative;
     clear: both;
@@ -540,6 +586,10 @@ footer{
         column-count: 2;
         /*column-gap: 1em;*/
     }
+    .page-section{
+        padding-left: 0;
+        padding-right: 0;
+    }
 }
 
 /* Small Devices, Tablets */
@@ -548,6 +598,10 @@ footer{
         column-count: 3;
         /*column-gap: 1em;*/
     }
+    .page-section{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
 }
 
 /* Medium Devices, Desktops */
@@ -555,6 +609,10 @@ footer{
     .list-content-masonary{
         column-count: 4;
         /*column-gap: 1em;*/
+    }
+    .page-section{
+        padding-left: 40px;
+        padding-right: 40px;
     }
 }
 

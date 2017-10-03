@@ -9,6 +9,8 @@
         <link rel="stylesheet" href="../../assets/css/vendor/bootstrap-select.min.css">
         <link rel="stylesheet" href="../../assets/font-awesome-4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="../../assets/css/vendor/animate.css">
+        <link rel="stylesheet" href="../../assets/css/vendor/fullsizable/jquery-fullsizable.css">
+        <link rel="stylesheet" href="../../assets/css/vendor/fullsizable/jquery-fullsizable-theme.css">
         <link rel="stylesheet" href="../../assets/css/app/styles.css">
         <link href="https://fonts.googleapis.com/css?family=Poppins:400,800" rel="stylesheet">
 
@@ -24,9 +26,9 @@
     <body class="has-solid-banner animated fadeIn">
         <nav id="Main-Navigation" class="headroom">
             <span class="col-xs-12 col-md-4">
-                <span id="Nav-Logo-Start" class="col-xs-12 no-padding">
+                <a id="Nav-Logo-Start" href="../../" class="col-xs-12 no-padding">
                     <img src="../../assets/img/drawables/sample-logo.png">
-                </span>
+                </a>
             </span>
             <span class="col-xs-12 col-md-offset-4 col-md-4 hidden-xs hidden-sm">
                 <ul id="Main-Navigation-Links">
@@ -60,10 +62,71 @@
                 </section>
                 <section class="row no-padding">
                     <span class="clearfix col-xs-12 no-padding">
-                        <section class="albumn-list">
-                            <a href="" class="col-xs-12 col-sm-6 col-md-4">
+                        <h3 class="text-left">Images</h3>
+                        <section class="albumn-list fullsizable">
+                            <a href="https://source.unsplash.com/random?house" class="col-xs-12 col-sm-6 col-md-4">
                                 <span>
                                     <figure style="background-image: url('https://source.unsplash.com/random?house')"></figure>
+                                </span>
+                            </a>
+                            <a href="https://source.unsplash.com/random?house" class="col-xs-12 col-sm-6 col-md-4">
+                                <span>
+                                    <figure style="background-image: url('https://source.unsplash.com/random?beach')"></figure>
+                                </span>
+                            </a>
+                            <a href="https://source.unsplash.com/random?house" class="col-xs-12 col-sm-6 col-md-4">
+                                <span>
+                                    <figure style="background-image: url('https://source.unsplash.com/random?river')"></figure>
+                                </span>
+                            </a>
+                            <a href="https://source.unsplash.com/random?house" class="col-xs-12 col-sm-6 col-md-4">
+                                <span>
+                                    <figure style="background-image: url('https://source.unsplash.com/random?house')"></figure>
+                                </span>
+                            </a>
+                            <a href="https://source.unsplash.com/random?house" class="col-xs-12 col-sm-6 col-md-4">
+                                <span>
+                                    <figure style="background-image: url('https://source.unsplash.com/random?beach')"></figure>
+                                </span>
+                            </a>
+                            <a href="https://source.unsplash.com/random?house" class="col-xs-12 col-sm-6 col-md-4">
+                                <span>
+                                    <figure style="background-image: url('https://source.unsplash.com/random?river')"></figure>
+                                </span>
+                            </a>
+                            <a href="https://source.unsplash.com/random?house" class="col-xs-12 col-sm-6 col-md-4">
+                                <span>
+                                    <figure style="background-image: url('https://source.unsplash.com/random?house')"></figure>
+                                </span>
+                            </a>
+                            <a href="https://source.unsplash.com/random?house" class="col-xs-12 col-sm-6 col-md-4">
+                                <span>
+                                    <figure style="background-image: url('https://source.unsplash.com/random?beach')"></figure>
+                                </span>
+                            </a>
+                            <a href="https://source.unsplash.com/random?house" class="col-xs-12 col-sm-6 col-md-4">
+                                <span>
+                                    <figure style="background-image: url('https://source.unsplash.com/random?river')"></figure>
+                                </span>
+                            </a>
+                        </section>
+                    </span>
+                    <span class="clearfix col-xs-12 no-padding">
+                        <h3 class="text-left">Vidoes</h3>
+                        <section class="albumn-list">
+                            <a data-videoplayer-src="https://youtu.be/OTX67XnG3j8" class="col-xs-12 col-sm-6 col-md-4">
+                                <span>
+                                    <figure style="background-image: url('https://source.unsplash.com/random?island')"></figure>
+                                </span>
+                            </a>
+                            <a data-videoplayer-src="https://youtu.be/OTX67XnG3j8" class="col-xs-12 col-sm-6 col-md-4">
+                                <span>
+                                    <figure style="background-image: url('https://source.unsplash.com/random?island')"></figure>
+                                </span>
+                            </a>
+                            <a data-videoplayer-src="https://youtu.be/OTX67XnG3j8" class="col-xs-12 col-sm-6 col-md-4">
+                                <span>
+                                    <figure style="background-image: url('https://source.unsplash.com/random?island')"></figure>
                                 </span>
                             </a>
                         </section>
@@ -71,16 +134,32 @@
                 </section>
             </section>
         </section>
+
+        <section id="tehj-video-player">
+            <span>
+                <span id="video-start" class="col-xs-12">
+                    <div class="embed-responsive">
+                        <iframe id="video" class="embed-responsive-item" src="" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                </span>
+                <span id="fullsized_close"></span>
+            </span>
+        </section>
+
         <footer></footer>
 
         <!-- SCRIPTS -->
-        <script type="text/javascript" src="../assets/js/vendor/jquery-1.9.1.min.js"></script>
-        <script type="text/javascript" src="../assets/js/vendor/bootstrap.min.js"></script>
-        <script type="text/javascript" src="../assets/js/vendor/jquery.initialize.min.js"></script>
-        <script type="text/javascript" src="../assets/js/vendor/jQuery.headroom.min.js"></script>
-        <script type="text/javascript" src="../assets/js/vendor/headroom.min.js"></script>
-        <script type="text/javascript" src="../assets/js/vendor/bootstrap-select.min.js"></script>
-        <script type="text/javascript" src="../assets/js/app/main.js"></script>
+        <script type="text/javascript" src="../../assets/js/vendor/jquery-1.9.1.min.js"></script>
+        <script type="text/javascript" src="../../assets/js/vendor/bootstrap.min.js"></script>
+        <script type="text/javascript" src="../../assets/js/vendor/jquery.initialize.min.js"></script>
+        <script type="text/javascript" src="../../assets/js/vendor/jQuery.headroom.min.js"></script>
+        <script type="text/javascript" src="../../assets/js/vendor/headroom.min.js"></script>
+        <script type="text/javascript" src="../../assets/js/vendor/bootstrap-select.min.js"></script>
+        <script type="text/javascript" src="../../assets/js/vendor/fullsizable/jquery-fullsizable.min.js"></script>
+        <script type="text/javascript" src="../../assets/js/vendor/smooth-scrolling.js"></script>
+        <script type="text/javascript" src="../../assets/js/app/main.js"></script>
+        <!--<script type="text/javascript" src="http://www.youtube.com/player_api"></script>-->
+        <script type="text/javascript" src="../../assets/js/app/tehj-simple-video-payer.js"></script>
 
     </body>
 </html>

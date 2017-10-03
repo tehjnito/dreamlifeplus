@@ -20,16 +20,16 @@
         <link rel="mask-icon" href="./favicon/safari-pinned-tab.svg" color="#2ecc71">
 
     </head>
-    <body class="animated fadeIn">
+    <body id="top" class="animated fadeIn">
         <nav id="Main-Navigation" class="headroom">
             <span class="col-xs-12 col-md-4">
-                <span id="Nav-Logo-Start" class="col-xs-12 no-padding">
+                <a id="Nav-Logo-Start" href="#top" class="col-xs-12 no-padding">
                     <img src="./assets/img/drawables/sample-logo.png">
-                </span>
+                </a>
             </span>
             <span class="col-xs-12 col-md-offset-4 col-md-4 hidden-xs hidden-sm">
                 <ul id="Main-Navigation-Links">
-                    <li class="active"><a href="">Home</a></li>
+                    <li class="active"><a href="#top">Home</a></li>
                     <li class=""><a href="./gallery">Gallery</a></li>
                     <li class=""><a href="./about">About/Contact</a></li>
                 </ul>
@@ -37,7 +37,7 @@
             <span class="col-xs-12 no-padding visible-xs visible-sm">
                 <a id="mobile-menu-toggle" data-toggle="collapse" data-target="#mobile-menu" class="btn-link btn-block text-center"><i style="transform:translateY(0px);" class="fa fa-border fa-2x fa-bars"></i></a>
                 <ul id="mobile-menu" class="clearfix col-xs-12 collapse">
-                    <li class="active"><a href=""><i class="fa fa-fw fa-minus"></i>&nbsp;Home</a></li>
+                    <li class="active"><a href="#top"><i class="fa fa-fw fa-minus"></i>&nbsp;Home</a></li>
                     <li class=""><a href=""><i class="fa fa-fw fa-minus"></i>&nbsp;Gallery</a></li>
                     <li class=""><a href=""><i class="fa fa-fw fa-minus"></i>&nbsp;About/Contact</a></li>
                 </ul>
@@ -150,6 +150,7 @@
         <script type="text/javascript" src="assets/js/vendor/jquery.initialize.min.js"></script>
         <script type="text/javascript" src="assets/js/vendor/jQuery.headroom.min.js"></script>
         <script type="text/javascript" src="assets/js/vendor/headroom.min.js"></script>
+        <script type="text/javascript" src="assets/js/vendor/smooth-scrolling.js"></script>
         <script type="text/javascript" src="assets/js/app/main.js"></script>
         <script type="text/javascript" src="assets/js/app/simple-fade-show.js"></script>
 

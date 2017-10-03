@@ -21,17 +21,17 @@
         <link rel="mask-icon" href="../favicon/safari-pinned-tab.svg" color="#2ecc71">
 
     </head>
-    <body class="has-solid-banner animated fadeIn">
+    <body id="top" class="has-solid-banner animated fadeIn">
         <nav id="Main-Navigation" class="headroom">
             <span class="col-xs-12 col-md-4">
-                <span id="Nav-Logo-Start" class="col-xs-12 no-padding">
+                <a id="Nav-Logo-Start" href="../" class="col-xs-12 no-padding">
                     <img src="../assets/img/drawables/sample-logo.png">
-                </span>
+                </a>
             </span>
             <span class="col-xs-12 col-md-offset-4 col-md-4 hidden-xs hidden-sm">
                 <ul id="Main-Navigation-Links">
                     <li class=""><a href="../">Home</a></li>
-                    <li class="active"><a href="">Gallery</a></li>
+                    <li class="active"><a href="#top">Gallery</a></li>
                     <li class=""><a href="../about">About/Contact</a></li>
                 </ul>
             </span>
@@ -39,7 +39,7 @@
                 <a id="mobile-menu-toggle" data-toggle="collapse" data-target="#mobile-menu" class="btn-link btn-block text-center"><i style="transform:translateY(0px);" class="fa fa-border fa-2x fa-bars"></i></a>
                 <ul id="mobile-menu" class="clearfix col-xs-12 collapse">
                     <li class=""><a href=""><i class="fa fa-fw fa-minus"></i>&nbsp;Home</a></li>
-                    <li class="active"><a href=""><i class="fa fa-fw fa-minus"></i>&nbsp;Gallery</a></li>
+                    <li class="active"><a href="#top"><i class="fa fa-fw fa-minus"></i>&nbsp;Gallery</a></li>
                     <li class=""><a href=""><i class="fa fa-fw fa-minus"></i>&nbsp;About/Contact</a></li>
                 </ul>
             </span>
@@ -57,6 +57,16 @@
                             <option value="OLDEST">Oldest First</option>
                         </select>
                     </span>
+                    <span class="hidden col-xs-6 col-sm-offset-4 col-sm-4 col-md-offset-4 col-md-2">
+                        <div class="input-group">
+                            <div class="input-group-btn">
+                                <button class="btn btn-default" type="submit">
+                                    <i class="glyphicon glyphicon-search"></i>
+                                </button>
+                            </div>
+                            <input type="text" class="form-control" placeholder="Search">
+                        </div>
+                    </span>
                 </section>
                 <section class="row no-padding">
                     <span class="clearfix col-xs-12 no-padding">
@@ -64,55 +74,55 @@
                             <a href="./album" class="col-xs-12 col-sm-6 col-md-4">
                                 <span>
                                     <figure style="background-image: url('https://source.unsplash.com/random?house')"></figure>
-                                    <figcaption>Latoya's Birthday</figcaption>
+                                    <figcaption>Name of Event</figcaption>
                                 </span>
                             </a>
                             <a href="./album" class="col-xs-12 col-sm-6 col-md-4">
                                 <span>
                                     <figure style="background-image: url('https://source.unsplash.com/random?house')"></figure>
-                                    <figcaption>Latoya's Birthday</figcaption>
+                                    <figcaption>Name of Event</figcaption>
                                 </span>
                             </a>
                             <a href="./album" class="col-xs-12 col-sm-6 col-md-4">
                                 <span>
                                     <figure style="background-image: url('https://source.unsplash.com/random?house')"></figure>
-                                    <figcaption>Latoya's Birthday</figcaption>
+                                    <figcaption>Name of Event</figcaption>
                                 </span>
                             </a>
                             <a href="./album" class="col-xs-12 col-sm-6 col-md-4">
                                 <span>
                                     <figure style="background-image: url('https://source.unsplash.com/random?house')"></figure>
-                                    <figcaption>Latoya's Birthday</figcaption>
+                                    <figcaption>Name of Event</figcaption>
                                 </span>
                             </a>
                             <a href="./album" class="col-xs-12 col-sm-6 col-md-4">
                                 <span>
                                     <figure style="background-image: url('https://source.unsplash.com/random?house')"></figure>
-                                    <figcaption>Latoya's Birthday</figcaption>
+                                    <figcaption>Name of Event</figcaption>
                                 </span>
                             </a>
                             <a href="./album" class="col-xs-12 col-sm-6 col-md-4">
                                 <span>
                                     <figure style="background-image: url('https://source.unsplash.com/random?house')"></figure>
-                                    <figcaption>Latoya's Birthday</figcaption>
+                                    <figcaption>Name of Event</figcaption>
                                 </span>
                             </a>
                             <a href="./album" class="col-xs-12 col-sm-6 col-md-4">
                                 <span>
                                     <figure style="background-image: url('https://source.unsplash.com/random?house')"></figure>
-                                    <figcaption>Latoya's Birthday</figcaption>
+                                    <figcaption>Name of Event</figcaption>
                                 </span>
                             </a>
                             <a href="./album" class="col-xs-12 col-sm-6 col-md-4">
                                 <span>
                                     <figure style="background-image: url('https://source.unsplash.com/random?house')"></figure>
-                                    <figcaption>Latoya's Birthday</figcaption>
+                                    <figcaption>Name of Event</figcaption>
                                 </span>
                             </a>
                             <a href="./album" class="col-xs-12 col-sm-6 col-md-4">
                                 <span>
                                     <figure style="background-image: url('https://source.unsplash.com/random?house')"></figure>
-                                    <figcaption>Latoya's Birthday</figcaption>
+                                    <figcaption>Name of Event</figcaption>
                                 </span>
                             </a>
                         </section>
@@ -129,6 +139,7 @@
         <script type="text/javascript" src="../assets/js/vendor/jQuery.headroom.min.js"></script>
         <script type="text/javascript" src="../assets/js/vendor/headroom.min.js"></script>
         <script type="text/javascript" src="../assets/js/vendor/bootstrap-select.min.js"></script>
+        <script type="text/javascript" src="../assets/js/vendor/smooth-scrolling.js"></script>
         <script type="text/javascript" src="../assets/js/app/main.js"></script>
 
     </body>
