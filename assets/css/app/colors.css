@@ -12,4 +12,8 @@
 }
 .pink{
     color: rgba(255, 108, 168,1);
+    color:#FF6CA8;
+}
+.hover-dark{
+    color:#aaa;
 }
