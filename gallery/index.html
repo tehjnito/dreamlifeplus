@@ -9,7 +9,7 @@
         <link rel="stylesheet" href="../assets/css/vendor/bootstrap-select.min.css">
         <link rel="stylesheet" href="../assets/font-awesome-4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="../assets/css/vendor/animate.css">
-        <link rel="stylesheet" href="../assets/css/app/styles.css">
+        <link rel="stylesheet" href="../assets/css/app/styles_2.css">
         <link href="https://fonts.googleapis.com/css?family=Poppins:400,800" rel="stylesheet">
 
         <title>Gallery | Dream Life Plus</title>
@@ -21,37 +21,42 @@
         <link rel="mask-icon" href="../favicon/safari-pinned-tab.svg" color="#2ecc71">
 
     </head>
-    <body id="top" class="has-solid-banner animated fadeIn">
-        <nav id="Main-Navigation" class="headroom">
+    <body id="top" class="animated fadeIn">
+        <nav id="Main-Navigation" class="inverse headroom">
             <span class="col-xs-12 col-md-4">
                 <a id="Nav-Logo-Start" href="../" class="col-xs-12 no-padding">
-                    <img src="../assets/img/drawables/sample-logo.png">
+                    <img id="dark" src="../assets/img/drawables/sample-logo-dark.png">
+                    <img id="light" src="../assets/img/drawables/sample-logo-light.png">
                 </a>
             </span>
             <span class="col-xs-12 col-md-offset-4 col-md-4 hidden-xs hidden-sm">
                 <ul id="Main-Navigation-Links">
                     <li class=""><a href="../">Home</a></li>
                     <li class="active"><a href="#top">Gallery</a></li>
-                    <li class=""><a href="../about">About/Contact</a></li>
+                    <li class=""><a href="./about">About/Contact</a></li>
                 </ul>
             </span>
             <span class="col-xs-12 no-padding visible-xs visible-sm">
                 <a id="mobile-menu-toggle" data-toggle="collapse" data-target="#mobile-menu" class="btn-link btn-block text-center"><i style="transform:translateY(0px);" class="fa fa-border fa-2x fa-bars"></i></a>
                 <ul id="mobile-menu" class="clearfix col-xs-12 collapse">
-                    <li class=""><a href=""><i class="fa fa-fw fa-minus"></i>&nbsp;Home</a></li>
+                    <li class=""><a href="../"><i class="fa fa-fw fa-minus"></i>&nbsp;Home</a></li>
                     <li class="active"><a href="#top"><i class="fa fa-fw fa-minus"></i>&nbsp;Gallery</a></li>
-                    <li class=""><a href=""><i class="fa fa-fw fa-minus"></i>&nbsp;About/Contact</a></li>
+                    <li class=""><a href="./about"><i class="fa fa-fw fa-minus"></i>&nbsp;About/Contact</a></li>
                 </ul>
             </span>
         </nav>
         <section id="body-wrapper" class="row">
             <secion id="page-big-banner">
-                <h1 class="accent_underline">Our Gallery</h1>
-                <hr>
+                <span class="tint fluid-absolute"></span>
+                <span class="fluid-absolute">
+                    <h1 class="accent_underline u-white">Our Gallery</h1>
+                    <hr>
+                </span>
             </secion>
-            <section class="clearfix text-center col-xs-12 page-section">
+            <section class="clearfix text-center col-xs-12 page-section bg-003 bg-tl">
                 <section class="row">
                     <span class="col-xs-6 col-sm-4 col-md-2">
+                        <label style="float:left;padding-left:5px;"><small>Display Order</small></label>
                         <select title="Newest First" class="selectpicker">
                             <option value="NEWEST">Newest First</option>
                             <option value="OLDEST">Oldest First</option>
@@ -130,7 +135,14 @@
                 </section>
             </section>
         </section>
-        <footer></footer>
+
+        <footer>
+            <span class="col-xs-12">
+                <p class="text-center text-white">
+                    copyright&copy;&nbsp;2017 - <strong>Dream Life Weddings and Events Plus</strong>
+                </p>
+            </span>
+        </footer>
 
         <!-- SCRIPTS -->
         <script type="text/javascript" src="../assets/js/vendor/jquery-1.9.1.min.js"></script>

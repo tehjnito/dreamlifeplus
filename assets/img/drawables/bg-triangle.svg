@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="720px" height="224px" viewBox="0 0 720 224" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 45.2 (43514) - http://www.bohemiancoding.com/sketch -->
+    <title>bg_pattern</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.300000012">
+        <g id="codepen_landing-2017-07-26" transform="translate(-720.000000, -214.000000)" fill-rule="nonzero" fill="#FFFFFF">
+            <g id="top">
+                <g id="hero_container" transform="translate(0.000000, 80.000000)">
+                    <g id="bg_pattern" transform="translate(720.000000, 134.000000)">
+                        <polygon id="Triangle" opacity="0.100000001" points="384 32 432 0 432 64"></polygon>
+                        <polygon id="Triangle" opacity="0.200000003" transform="translate(456.000000, 32.000000) rotate(-180.000000) translate(-456.000000, -32.000000) " points="432 32 480 0 480 64"></polygon>
+                        <polygon id="Triangle" points="432 64 480 32 480 96"></polygon>
+                        <polygon id="Triangle" opacity="0.400000006" transform="translate(504.000000, 64.000000) rotate(-180.000000) translate(-504.000000, -64.000000) " points="480 64 528 32 528 96"></polygon>
+                        <polygon id="Triangle" opacity="0.25" points="480 96 528 64 528 128"></polygon>
+                        <polygon id="Triangle" opacity="0.35" transform="translate(552.000000, 96.000000) rotate(-180.000000) translate(-552.000000, -96.000000) " points="528 96 576 64 576 128"></polygon>
+                        <polygon id="Triangle" opacity="0.100000001" points="528 128 576 96 576 160"></polygon>
+                        <polygon id="Triangle" opacity="0.200000003" transform="translate(600.000000, 128.000000) rotate(-180.000000) translate(-600.000000, -128.000000) " points="576 128 624 96 624 160"></polygon>
+                        <polygon id="Triangle" points="576 160 624 128 624 192"></polygon>
+                        <polygon id="Triangle" opacity="0.200000003" transform="translate(648.000000, 160.000000) rotate(-180.000000) translate(-648.000000, -160.000000) " points="624 160 672 128 672 192"></polygon>
+                        <polygon id="Triangle" opacity="0.25" points="624 192 672 160 672 224"></polygon>
+                        <polygon id="Triangle" opacity="0.35" transform="translate(696.000000, 192.000000) rotate(-180.000000) translate(-696.000000, -192.000000) " points="672 192 720 160 720 224"></polygon>
+                        <polygon id="Triangle" opacity="0.25" points="480 224 528 192 528 224"></polygon>
+                        <polygon id="Triangle" opacity="0.35" transform="translate(552.000000, 208.000000) rotate(-180.000000) translate(-552.000000, -208.000000) " points="528 192 576 192 576 224"></polygon>
+                        <polygon id="Triangle" opacity="0.100000001" points="576 224 624 192 624 224"></polygon>
+                        <polygon id="Triangle" opacity="0.35" transform="translate(696.000000, 128.000000) rotate(-180.000000) translate(-696.000000, -128.000000) " points="672 128 720 96 720 160"></polygon>
+                        <polygon id="Triangle" opacity="0.200000003" points="528 192 576 160 576 224"></polygon>
+                        <polygon id="Triangle" opacity="0.400000006" transform="translate(600.000000, 192.000000) rotate(-180.000000) translate(-600.000000, -192.000000) " points="576 192 624 160 624 224"></polygon>
+                        <polygon id="Triangle" opacity="0.25" points="432 128 480 96 480 160"></polygon>
+                        <polygon id="Triangle" opacity="0.35" transform="translate(504.000000, 128.000000) rotate(-180.000000) translate(-504.000000, -128.000000) " points="480 128 528 96 528 160"></polygon>
+                        <polygon id="Triangle" opacity="0.200000003" points="672 96 720 64 720 128"></polygon>
+                        <polygon id="Triangle" opacity="0.100000001" points="384 96 432 64 432 128"></polygon>
+                        <polygon id="Triangle" opacity="0.05" transform="translate(456.000000, 96.000000) rotate(-180.000000) translate(-456.000000, -96.000000) " points="432 96 480 64 480 128"></polygon>
+                        <polygon id="Triangle" opacity="0.05" transform="translate(552.000000, 160.000000) rotate(-180.000000) translate(-552.000000, -160.000000) " points="528 160 576 128 576 192"></polygon>
+                        <polygon id="Triangle" opacity="0.200000003" points="528 64 576 32 576 96"></polygon>
+                        <polygon id="Triangle" opacity="0.100000001" points="480 32 528 0 528 64"></polygon>
+                        <polygon id="Triangle" opacity="0.200000003" transform="translate(552.000000, 32.000000) rotate(-180.000000) translate(-552.000000, -32.000000) " points="528 32 576 0 576 64"></polygon>
+                        <polygon id="Triangle" opacity="0.100000001" points="576 96 624 64 624 128"></polygon>
+                        <polygon id="Triangle" opacity="0.200000003" transform="translate(648.000000, 96.000000) rotate(-180.000000) translate(-648.000000, -96.000000) " points="624 96 672 64 672 128"></polygon>
+                        <polygon id="Triangle" opacity="0.100000001" points="672 160 720 128 720 192"></polygon>
+                        <polygon id="Triangle" opacity="0.100000001" points="384 160 432 128 432 192"></polygon>
+                        <polygon id="Triangle" opacity="0.200000003" transform="translate(456.000000, 160.000000) rotate(-180.000000) translate(-456.000000, -160.000000) " points="432 160 480 128 480 192"></polygon>
+                        <polygon id="Triangle" opacity="0.100000001" points="336 192 384 160 384 224"></polygon>
+                        <polygon id="Triangle" opacity="0.200000003" transform="translate(408.000000, 192.000000) rotate(-180.000000) translate(-408.000000, -192.000000) " points="384 192 432 160 432 224"></polygon>
+                        <polygon id="Triangle" opacity="0.100000001" points="240 192 288 160 288 224"></polygon>
+                        <polygon id="Triangle" opacity="0.200000003" transform="translate(312.000000, 192.000000) rotate(-180.000000) translate(-312.000000, -192.000000) " points="288 192 336 160 336 224"></polygon>
+                        <polygon id="Triangle" opacity="0.05" transform="translate(360.000000, 160.000000) rotate(-180.000000) translate(-360.000000, -160.000000) " points="336 160 384 128 384 192"></polygon>
+                        <polygon id="Triangle" opacity="0.100000001" points="336 128 384 96 384 160"></polygon>
+                        <polygon id="Triangle" opacity="0.200000003" transform="translate(408.000000, 128.000000) rotate(-180.000000) translate(-408.000000, -128.000000) " points="384 128 432 96 432 160"></polygon>
+                        <polygon id="Triangle" opacity="0.05" points="288 96 336 64 336 128"></polygon>
+                        <polygon id="Triangle" opacity="0.200000003" transform="translate(360.000000, 96.000000) rotate(-180.000000) translate(-360.000000, -96.000000) " points="336 96 384 64 384 128"></polygon>
+                        <polygon id="Triangle" opacity="0.100000001" transform="translate(312.000000, 128.000000) rotate(-180.000000) translate(-312.000000, -128.000000) " points="288 128 336 96 336 160"></polygon>
+                        <polygon id="Triangle" opacity="0.100000001" points="144 192 192 160 192 224"></polygon>
+                        <polygon id="Triangle" opacity="0.200000003" transform="translate(216.000000, 192.000000) rotate(-180.000000) translate(-216.000000, -192.000000) " points="192 192 240 160 240 224"></polygon>
+                        <polygon id="Triangle" opacity="0.400000006" points="192 160 240 128 240 192"></polygon>
+                        <polygon id="Triangle" opacity="0.200000003" transform="translate(264.000000, 160.000000) rotate(-180.000000) translate(-264.000000, -160.000000) " points="240 160 288 128 288 192"></polygon>
+                        <polygon id="Triangle" opacity="0.100000001" points="144 128 192 96 192 160"></polygon>
+                        <polygon id="Triangle" opacity="0.200000003" transform="translate(216.000000, 128.000000) rotate(-180.000000) translate(-216.000000, -128.000000) " points="192 128 240 96 240 160"></polygon>
+                        <polygon id="Triangle" opacity="0.100000001" points="96 224 144 192 144 224"></polygon>
+                        <polygon id="Triangle" opacity="0.200000003" transform="translate(168.000000, 208.000000) rotate(-180.000000) translate(-168.000000, -208.000000) " points="144 192 192 192 192 224"></polygon>
+                        <polygon id="Triangle" opacity="0.100000001" points="192 224 240 192 240 224"></polygon>
+                        <polygon id="Triangle" opacity="0.200000003" transform="translate(264.000000, 208.000000) rotate(-180.000000) translate(-264.000000, -208.000000) " points="240 192 288 192 288 224"></polygon>
+                        <polygon id="Triangle" opacity="0.05" points="288 224 336 192 336 224"></polygon>
+                        <polygon id="Triangle" transform="translate(360.000000, 208.000000) rotate(-180.000000) translate(-360.000000, -208.000000) " points="336 192 384 192 384 224"></polygon>
+                        <polygon id="Triangle" opacity="0.100000001" points="48 192 96 160 96 224"></polygon>
+                        <polygon id="Triangle" opacity="0.200000003" transform="translate(120.000000, 192.000000) rotate(-180.000000) translate(-120.000000, -192.000000) " points="96 192 144 160 144 224"></polygon>
+                        <polygon id="Triangle" opacity="0.100000001" points="0 224 48 192 48 224"></polygon>
+                        <polygon id="Triangle" transform="translate(72.000000, 208.000000) rotate(-180.000000) translate(-72.000000, -208.000000) " points="48 192 96 192 96 224"></polygon>
+                        <polygon id="Triangle" opacity="0.100000001" points="96 160 144 128 144 192"></polygon>
+                        <polygon id="Triangle" opacity="0.100000001" points="384 224 432 192 432 224"></polygon>
+                        <polygon id="Triangle" opacity="0.200000003" transform="translate(456.000000, 208.000000) rotate(-180.000000) translate(-456.000000, -208.000000) " points="432 192 480 192 480 224"></polygon>
+                        <polygon id="Triangle" opacity="0.400000006" points="432 192 480 160 480 224"></polygon>
+                        <polygon id="Triangle" opacity="0.200000003" transform="translate(504.000000, 192.000000) rotate(-180.000000) translate(-504.000000, -192.000000) " points="480 192 528 160 528 224"></polygon>
+                        <polygon id="Triangle" opacity="0.02" points="672 224 720 192 720 224"></polygon>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

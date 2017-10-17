@@ -3,7 +3,8 @@ body{
     top:0;left:0;
     width:100%;height:auto;
     color:#555;
-    background-color:rgba(255, 108, 168,0.08);
+    /*background-color:rgba(255, 108, 168,0.08);*/
+    background-color:#fff;
 }
 a:hover{
     cursor: pointer;
@@ -145,7 +146,28 @@ small, .small{
     top:0;left:0;
     width:100%;height:100%;
 }
+.bg-tl{
+    background-position: 0px 0px;
+}
+.bg-tr{
+    background-position: 100% 0px;
+}
+.bg-tc{
+    background-image: url('../../img/drawables/bg-002.png');
+    background-position: 50% 0px;
+}
+.bg-c{
+    background-position: 50% 50%;
+}
 
+.bg-002{
+    background-image: url('../../img/drawables/bg-002.png');
+    background-repeat: no-repeat;
+}
+.bg-003{
+    background-image: url('../../img/drawables/bg-003.png');
+    /*background-repeat: no-repeat;*/
+}
 
 
 #body-wrapper{
@@ -433,6 +455,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
     margin:0 auto;
     background-color:#F1C40F;
 }
+.accent_underline.u-white ~ hr{
+    background-color: #FFF !important;
+}
 #Services-Section{
     /*border-top: 10px solid rgba(255, 108, 168,1);
     border-bottom: 10px solid rgba(255, 108, 168,1);*/
@@ -538,9 +563,18 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
     top:0;left:0;
     width:100%;height:100vh;
     min-height: 300px;max-height:400px;
-    background-color: rgba(255, 108, 168,0.3);
-    background-image: url('../../img/drawables/bg-001.png');
+    background-color: rgba(255, 108, 168,1);
+    background-color: #FF6CA8;
+    background-image: url('../../img/drawables/clip_art/_custom_bg.png');
+    background-image: url('../../img/photo-city.jpg');
+    background-image: url('../../img/drawables/Birds-Wallpapers-20-1920x1080.jpg');
+    background-size: cover;
+    background-position: center;
     background-attachment: fixed;
+    color: #FFF;
+}
+#page-big-banner .tint{
+    background-color: rgba(0,0,0,0.3);
 }
 #page-big-banner h1{
     position: relative;
@@ -550,11 +584,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
     transform: translateY(-50%);
     text-align: center;
     font-size: 60px;
-    text-transform: capitalize;
-    font-weight: 400;
+    text-transform: uppercase;
+    font-weight: 600;
     font-family: 'Poppins', sans-serif;
     margin-bottom:20px;
-    /*color:#FFF;*/
+    color:#FFF;
 }
 #page-big-banner h1 ~ hr{
     top:40%;
@@ -578,10 +612,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
     padding: 40px 0;
 }
 .albumn-list > a{
-    height: auto;
-    max-height: 400px;
+    height: 400px;
     margin-bottom:0px;
     padding:0 5px;
+    overflow: hidden;
     /*background-color: #F1C40F;
     -moz-box-shadow: 0 1px 2px rgba(0,0,0,0.07);
     -webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.07);
@@ -719,6 +753,19 @@ footer p{
 @media (min-width: 992px) {
     #Main-Navigation{
         background-color:transparent;
+    }
+    #Main-Navigation.inverse{
+        background-color:rgba(255, 108, 168,1);
+    }
+    #Main-Navigation.inverse #Nav-Logo-Start > img#dark{
+        display: none;
+    }
+    #Main-Navigation.inverse #Nav-Logo-Start > img#light{
+        display: block;
+    }
+    #Main-Navigation.inverse #Main-Navigation-Links > li > a,
+    #Main-Navigation.inverse #Main-Navigation-Links > li:after{
+        color: #FFF;
     }
     #Home-Page-Hero #Hero-Title > h1{
         font-size:140px;
