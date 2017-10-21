@@ -6,6 +6,9 @@ body{
     /*background-color:rgba(255, 108, 168,0.08);*/
     background-color:#fff;
 }
+body.tehj-gallery-open{
+    overflow: hidden;
+}
 a:hover{
     cursor: pointer;
 }
@@ -565,9 +568,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
     min-height: 300px;max-height:400px;
     background-color: rgba(255, 108, 168,1);
     background-color: #FF6CA8;
-    background-image: url('../../img/drawables/clip_art/_custom_bg.png');
+    /*background-image: url('../../img/drawables/clip_art/_custom_bg.png');
     background-image: url('../../img/photo-city.jpg');
-    background-image: url('../../img/drawables/Birds-Wallpapers-20-1920x1080.jpg');
+    background-image: url('../../img/drawables/Birds-Wallpapers-20-1920x1080.jpg');*/
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -611,7 +614,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
     width:100%;height:auto;
     padding: 40px 0;
 }
-.albumn-list > a{
+.albumn-list > [href]{
     height: 400px;
     margin-bottom:0px;
     padding:0 5px;
@@ -621,19 +624,19 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
     -webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.07);
     box-shadow: 0 1px 2px rgba(0,0,0,0.07);*/
 }
-.albumn-list.close-fit > a{
+.albumn-list.close-fit > [href]{
     height:300px;
     max-height:300px;
     margin-bottom:5px;
 }
-.albumn-list > a > :first-child{
+.albumn-list > [href] > :first-child{
     position: relative;
     float: left;
     top:0;left:0;
     width:100%;height:100%;
     transition: all ease-in-out 0.1s;
 }
-.albumn-list > a > :first-child > figure{
+.albumn-list > [href] > :first-child > figure{
     position: relative;
     top:0;left:0;
     width:100%;height:300px;
@@ -643,7 +646,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
     border: 5px solid transparent;
     transition: all ease-in-out 0.1s;
 }
-.albumn-list > a:hover > :first-child > figure{
+.albumn-list > [href]:hover > :first-child > figure{
     transition: all ease-in-out 0.1s;
     /*transform: scale(0.99);*/
     z-index: 90;
@@ -651,11 +654,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
     -webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.7);
     box-shadow: 0 1px 2px rgba(0,0,0,0.7);
 }
-.albumn-list > a:hover > :first-child > figure{
+.albumn-list > [href]:hover > :first-child > figure{
     border-color: #555;
     transition: all ease-in-out 0.1s;
 }
-.albumn-list > a > :first-child > figcaption{
+.albumn-list > [href] > :first-child > figcaption{
     position: relative;
     top:0;left:0;
     width:100%;height:auto;
@@ -675,6 +678,91 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
 
 
 
+#tehjGalleryStart{
+    position: fixed;
+    top:0;left:0;
+    width:100vw;height:100vh;
+    display: none;
+    background-color:rgba(0, 0, 0, 1);
+    z-index: 999;
+}
+.tehj-gallery-open #tehjGalleryStart{
+    display: block;
+}
+#tehjGalleryStart #image-start{
+    position: relative;
+    top:0;left:0;
+    overflow: auto;
+    width:80%;height:100%;
+    display: block;
+    margin: 0 auto;
+}
+#tehjGalleryStart #image-start > img{
+    position: relative;
+    top:50%;left:50%;
+    width:auto;height:auto;
+    max-width: 100%;
+    max-height: 100%;
+    transform: translate(-50%,-50%);
+}
+#tehjGalleryStart #gallery-nav{
+    position:absolute;
+    float: left;
+    top:0;left:0;
+    padding:2px;
+    width:100%;height:100%;
+}
+#tehjGalleryStart #gallery-nav > span{
+    position: absolute;
+    top:0;left:0;
+    clear: both;
+    float:left;
+    width:100%;height:auto;
+    min-height:50px;
+    /*background-color: #000;*/
+}
+#tehjGalleryStart #gallery-nav #gallery-close-start{
+    z-index: 1000;
+}
+#tehjGalleryStart #gallery-nav #gallery-close{
+    float: right;
+    right:40px;
+    padding:5px;
+    text-align: right;
+    color: rgba(255,255,255,0.8);
+    font-size: 14px;
+    background:none;
+    -webkit-transition: opacity .15s linear;
+    -moz-transition: opacity .15s linear;
+    transition: opacity .15s linear;
+    background-color: #000;
+}
+#tehjGalleryStart #gallery-nav #gallery-close:hover{
+    color: #FFF;
+    -webkit-transition: color .15s linear;
+    -moz-transition: color .15s linear;
+    transition: color .15s linear;
+}
+#tehjGalleryStart #gallery-nav #gallery-arrows{
+    top:50%;
+    transform: translateY(-50%);
+    z-index: 1000;
+}
+#tehjGalleryStart #gallery-nav #gallery-arrows .btn{
+    color:#FFF;
+    opacity:0.8;
+    font-size: 16px;
+    background: none;
+    -webkit-transition: opacity .15s linear;
+    -moz-transition: opacity .15s linear;
+    transition: opacity .15s linear;
+}
+#tehjGalleryStart #gallery-nav #gallery-arrows .btn:hover{
+    opacity:1;
+    -webkit-transition: opacity .15s linear;
+    -moz-transition: opacity .15s linear;
+    transition: opacity .15s linear;
+}
 
 #tehj-video-player{
     position: fixed;

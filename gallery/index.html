@@ -1,5 +1,5 @@
 <!DOCTYPE>
-<html lang="en">
+<html lang="en" ng-app="app" ng-controller="ctrl_gallerypage" ng-cloak>
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -46,7 +46,7 @@
             </span>
         </nav>
         <section id="body-wrapper" class="row">
-            <secion id="page-big-banner">
+            <secion id="page-big-banner" style="background-image:url('{{BannerImage.$value}}')">
                 <span class="tint fluid-absolute"></span>
                 <span class="fluid-absolute">
                     <h1 class="accent_underline u-white">Our Gallery</h1>
@@ -76,58 +76,10 @@
                 <section class="row no-padding">
                     <span class="clearfix col-xs-12 no-padding">
                         <section class="albumn-list">
-                            <a href="./album" class="col-xs-12 col-sm-6 col-md-4">
+                            <a ng-repeat="x in GalleryList" href="./album?aid={{x.$id}}" class="col-xs-12 col-sm-6 col-md-4">
                                 <span>
-                                    <figure style="background-image: url('https://source.unsplash.com/random?house')"></figure>
-                                    <figcaption>Name of Event</figcaption>
-                                </span>
-                            </a>
-                            <a href="./album" class="col-xs-12 col-sm-6 col-md-4">
-                                <span>
-                                    <figure style="background-image: url('https://source.unsplash.com/random?house')"></figure>
-                                    <figcaption>Name of Event</figcaption>
-                                </span>
-                            </a>
-                            <a href="./album" class="col-xs-12 col-sm-6 col-md-4">
-                                <span>
-                                    <figure style="background-image: url('https://source.unsplash.com/random?house')"></figure>
-                                    <figcaption>Name of Event</figcaption>
-                                </span>
-                            </a>
-                            <a href="./album" class="col-xs-12 col-sm-6 col-md-4">
-                                <span>
-                                    <figure style="background-image: url('https://source.unsplash.com/random?house')"></figure>
-                                    <figcaption>Name of Event</figcaption>
-                                </span>
-                            </a>
-                            <a href="./album" class="col-xs-12 col-sm-6 col-md-4">
-                                <span>
-                                    <figure style="background-image: url('https://source.unsplash.com/random?house')"></figure>
-                                    <figcaption>Name of Event</figcaption>
-                                </span>
-                            </a>
-                            <a href="./album" class="col-xs-12 col-sm-6 col-md-4">
-                                <span>
-                                    <figure style="background-image: url('https://source.unsplash.com/random?house')"></figure>
-                                    <figcaption>Name of Event</figcaption>
-                                </span>
-                            </a>
-                            <a href="./album" class="col-xs-12 col-sm-6 col-md-4">
-                                <span>
-                                    <figure style="background-image: url('https://source.unsplash.com/random?house')"></figure>
-                                    <figcaption>Name of Event</figcaption>
-                                </span>
-                            </a>
-                            <a href="./album" class="col-xs-12 col-sm-6 col-md-4">
-                                <span>
-                                    <figure style="background-image: url('https://source.unsplash.com/random?house')"></figure>
-                                    <figcaption>Name of Event</figcaption>
-                                </span>
-                            </a>
-                            <a href="./album" class="col-xs-12 col-sm-6 col-md-4">
-                                <span>
-                                    <figure style="background-image: url('https://source.unsplash.com/random?house')"></figure>
-                                    <figcaption>Name of Event</figcaption>
+                                    <figure style="background-image: url('{{x.DisplayImage}}')"></figure>
+                                    <figcaption>{{x.Name}}</figcaption>
                                 </span>
                             </a>
                         </section>
@@ -153,6 +105,25 @@
         <script type="text/javascript" src="../assets/js/vendor/bootstrap-select.min.js"></script>
         <script type="text/javascript" src="../assets/js/vendor/smooth-scrolling.js"></script>
         <script type="text/javascript" src="../assets/js/app/main.js"></script>
+        <script type="text/javascript" src="../assets/js/vendor/angular.min.js"></script>
+
+        <script src="https://www.gstatic.com/firebasejs/3.6.6/firebase.js"></script>
+        <script src="https://cdn.firebase.com/libs/angularfire/2.3.0/angularfire.min.js"></script>
+        <script>
+            // Initialize Firebase
+            var config = {
+                apiKey: "AIzaSyDIIPyX7UUeiUyVxiNbncXmeMQNew5KCJ0",
+                authDomain: "dev-dreamlife.firebaseapp.com",
+                databaseURL: "https://dev-dreamlife.firebaseio.com",
+                projectId: "dev-dreamlife",
+                storageBucket: "dev-dreamlife.appspot.com",
+                messagingSenderId: "355606411005"
+            };
+           firebase.initializeApp(config);
+        </script>
+        <!--<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>-->
+
+        <script type="text/javascript" src="../assets/js/app/app.js"></script>
 
     </body>
 </html>

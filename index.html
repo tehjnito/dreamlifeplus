@@ -1,5 +1,5 @@
 <!DOCTYPE>
-<html lang="en">
+<html ng-app="app" ng-controller="ctrl_homepage" lang="en" ng-cloak>
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -48,9 +48,10 @@
             <section id="Home-Page-Hero">
                 <section id="Hero-Bg-Content" class="col-xs-12 full-bg-image no-padding">
                     <section class="col-xs-12 no-padding" data-zoom-fade-show data-change-speed="20000">
-                        <span style="background-image:url('https://source.unsplash.com/random?tree')"></span>
-                        <span style="background-image:url('https://source.unsplash.com/random?car')"></span>
-                        <span class="active xfull-bg-image xfluid-absolute" style="background-image:url('./assets/img/Wedding-Couple-HD-Photography.jpg')"></span>
+                        <span ng-repeat="x in HeroBanner track by $index" style="background-image:url('{{x.$value}}')"></span>
+                        <!--<span style="background-image:url('https://source.unsplash.com/random?car')"></span>
+                        <span style="background-image:url('./assets/img/Wedding-Couple-HD-Photography.jpg')"></span>-->
+                        <!--<span class="active xfull-bg-image xfluid-absolute" style="background-image:url('./assets/img/Wedding-Couple-HD-Photography.jpg')"></span>-->
                     </section>
 
                     <span class="col-xs-12">
@@ -105,7 +106,7 @@
                     <hr>
                 </span>
                 <span class="col-xs-12 col-md-8">
-                    <span style="background-image:url('https://source.unsplash.com/random?wedding')" class="img-section"></span>
+                    <span style="background-image:url('{{FeaturedImages.weddings.$value}}')" class="img-section"></span>
                 </span>
             </section>
             <section class="row feature-section">
@@ -114,7 +115,7 @@
                     <hr>
                 </span>
                 <span class="col-xs-12 col-md-8 col-md-pull-4">
-                    <span style="background-image:url('https://source.unsplash.com/random?banquet')" class="img-section"></span>
+                    <span style="background-image:url('{{FeaturedImages.banquets.$value}}')" class="img-section"></span>
                 </span>
             </section>
             <section class="row feature-section">
@@ -123,7 +124,7 @@
                     <hr>
                 </span>
                 <span class="col-xs-12 col-md-8">
-                    <span style="background-image:url('https://source.unsplash.com/random?party')" class="img-section"></span>
+                    <span style="background-image:url('{{FeaturedImages.parties.$value}}')" class="img-section"></span>
                 </span>
             </section>
             <section class="row feature-section">
@@ -132,7 +133,7 @@
                     <hr>
                 </span>
                 <span class="col-xs-12 col-md-8 col-md-pull-4">
-                    <span style="background-image:url('https://source.unsplash.com/random?social')" class="img-section"></span>
+                    <span style="background-image:url('{{FeaturedImages.socialEvents.$value}}')" class="img-section"></span>
                 </span>
             </section>
             <section class="row feature-section">
@@ -141,7 +142,7 @@
                     <hr>
                 </span>
                 <span class="col-xs-12 col-md-8">
-                    <span style="background-image:url('https://source.unsplash.com/random?concert')" class="img-section"></span>
+                    <span style="background-image:url('{{FeaturedImages.concerts.$value}}')" class="img-section"></span>
                 </span>
             </section>
             <section class="row feature-section">
@@ -150,7 +151,7 @@
                     <hr>
                 </span>
                 <span class="col-xs-12 col-md-8 col-md-pull-4">
-                    <span style="background-image:url('https://source.unsplash.com/random?lecture')" class="img-section"></span>
+                    <span style="background-image:url('{{FeaturedImages.seminars.$value}}')" class="img-section"></span>
                 </span>
             </section>
             <section class="clearfix col-xs-12 page-section bg-pink">
@@ -180,6 +181,24 @@
         <script type="text/javascript" src="assets/js/vendor/smooth-scrolling.js"></script>
         <script type="text/javascript" src="assets/js/app/main.js"></script>
         <script type="text/javascript" src="assets/js/app/simple-fade-show.js"></script>
+        <script type="text/javascript" src="assets/js/vendor/angular.min.js"></script>
 
+        <script src="https://www.gstatic.com/firebasejs/3.6.6/firebase.js"></script>
+        <script src="https://cdn.firebase.com/libs/angularfire/2.3.0/angularfire.min.js"></script>
+        <script>
+            // Initialize Firebase
+            var config = {
+                apiKey: "AIzaSyDIIPyX7UUeiUyVxiNbncXmeMQNew5KCJ0",
+                authDomain: "dev-dreamlife.firebaseapp.com",
+                databaseURL: "https://dev-dreamlife.firebaseio.com",
+                projectId: "dev-dreamlife",
+                storageBucket: "dev-dreamlife.appspot.com",
+                messagingSenderId: "355606411005"
+            };
+           firebase.initializeApp(config);
+        </script>
+        <!--<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>-->
+
+        <script type="text/javascript" src="assets/js/app/app.js"></script>
     </body>
 </html>
