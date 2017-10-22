@@ -1,0 +1,93 @@
+<!DOCTYPE>
+<html lang="en" ng-app="appAdmin">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../assets/css/vendor/normalize.css">
+        <link rel="stylesheet" href="../assets/css/vendor/united.bootstrap.min.css">
+        <link rel="stylesheet" href="../assets/css/vendor/bootstrap-social.css">
+        <link rel="stylesheet" href="../assets/css/vendor/bootstrap-select.min.css">
+        <link rel="stylesheet" href="../assets/font-awesome-4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="../assets/css/vendor/animate.css">
+        <link rel="stylesheet" href="../assets/css/app/styles_2.css">
+        <link rel="stylesheet" href="../assets/css/app/admin_style.css">
+        <link href="https://fonts.googleapis.com/css?family=Poppins:400,800" rel="stylesheet">
+
+        <title>Admin | Dream Life Plus</title>
+
+        <link rel="apple-touch-icon" sizes="180x180" href="../favicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../favicon/favicon-16x16.png">
+        <link rel="manifest" href="../favicon/manifest.json">
+        <link rel="mask-icon" href="../favicon/safari-pinned-tab.svg" color="#2ecc71">
+    </head>
+
+    <body>
+        <section class="row">
+            <section id="Side-Panel" class="col-md-2 no-padding">
+                <header></header>
+                <ul class="nav nav-pills nav-stacked">
+                    <li class=""><a data-toggle="tab" href="#galleries">Galleries</a></li>
+                    <li><a data-toggle="tab" href="#newgallery">New Gallery</a></li>
+                    <li><a data-toggle="tab" href="#homepage">Home Page</a></li>
+                </ul>
+            </section>
+            <section id="Content-Panel" class="col-md-push-2 col-md-10">
+                <div class="tab-content">
+                    <div id="galleries" ng-controller="ctrl_admin_galleries" class="tab-pane fade in active">
+                        <hgroup>
+                            <h3>Galleries</h3>
+                            <hr>
+                        </hgroup>
+                        <span class="col-xs-12">
+                            <strong>Total Galleries:</strong>&nbsp;{{Galleries.length}}
+                            <big>&nbsp;|&nbsp;</big>
+                            <strong>Total Images:</strong>&nbsp;120
+                        </span>
+                        <ul class="col-xs-12 albumn-list">
+                            <a href ng-repeat="x in Galleries" class="col-xs-12 col-sm-6 col-md-4">
+                                <span>
+                                    <figure style="background-image: url('{{x.DisplayImage}}')"></figure>
+                                    <figcaption>{{x.Name}}</figcaption>
+                                </span>
+                            </a>
+                        </ul>
+                    </div>
+                    <div id="newgallery" class="tab-pane fade">
+                        <hgroup>
+                            <h3>New Gallery</h3>
+                            <hr>
+                        </hgroup>
+                    </div>
+                    <div id="homepage" class="tab-pane fade">
+                        <h3>Menu 2</h3>
+                        <p>Some content in menu 2.</p>
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <!-- SCRIPTS -->
+        <script type="text/javascript" src="../../assets/js/vendor/jquery-1.9.1.min.js"></script>
+        <script type="text/javascript" src="../../assets/js/vendor/bootstrap.min.js"></script>
+        <script type="text/javascript" src="../../assets/js/vendor/bootstrap-select.min.js"></script>
+        <script type="text/javascript" src="../../assets/js/vendor/angular.min.js"></script>
+
+        <script src="https://www.gstatic.com/firebasejs/3.6.6/firebase.js"></script>
+        <script src="https://cdn.firebase.com/libs/angularfire/2.3.0/angularfire.min.js"></script>
+        <script>
+            // Initialize Firebase
+            var config = {
+                apiKey: "AIzaSyDIIPyX7UUeiUyVxiNbncXmeMQNew5KCJ0",
+                authDomain: "dev-dreamlife.firebaseapp.com",
+                databaseURL: "https://dev-dreamlife.firebaseio.com",
+                projectId: "dev-dreamlife",
+                storageBucket: "dev-dreamlife.appspot.com",
+                messagingSenderId: "355606411005"
+            };
+           firebase.initializeApp(config);
+        </script>
+
+        <script type="text/javascript" src="../js/app/app.js"></script>
+    </body>
+</html>

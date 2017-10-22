@@ -23,20 +23,20 @@ app.controller('ctrl_gallerypage', function($scope, $firebaseObject, $firebaseAr
     var bannerRef = firebase.database().ref("GalleryPage/BannerImage");
     $scope.BannerImage = $firebaseObject(bannerRef);
 
-    var galleryListRef = firebase.database().ref("Galleries");
-    $scope.GalleryList = $firebaseArray(galleryListRef);
+    var albumListRef = firebase.database().ref("Albums");
+    $scope.AlbumList = $firebaseArray(albumListRef);
 });
 
 app.controller('ctrl_albumpage', function($scope, $firebaseObject, $firebaseArray){
     var theAlbumID = GetUrlParameter["aid"];
-    $scope.GalleryInfo = "";
+    $scope.AlbumInfo = "";
     $scope.AlbumImages = [];
 
     if(!NullOrEmpty(theAlbumID)){
-        var galleryInfoRef = firebase.database().ref("Galleries/" + theAlbumID);
-        $scope.GalleryInfo = $firebaseObject(galleryInfoRef);
+        var albumInfoRef = firebase.database().ref("Albums/" + theAlbumID);
+        $scope.AlbumInfo = $firebaseObject(albumInfoRef);
 
-        var albumImagesRef = firebase.database().ref("Photos").orderByChild('GalleryID').equalTo(theAlbumID);
+        var albumImagesRef = firebase.database().ref("Photos").orderByChild('AlbumID').equalTo(theAlbumID);
         $scope.AlbumImages = $firebaseArray(albumImagesRef);
     }
 });

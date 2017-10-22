@@ -105,6 +105,16 @@ small, .small{
     color: #555;    
     background-color: #fafafa;
 }
+.btn-pink{
+    color: #FFF;
+    background-color: #FF6CA8;
+}
+.btn-pink:focus,
+.btn-pink:hover{
+    color: #FFF;    
+    background-color: #db598e;
+}
+
 .bootstrap-select{
     padding: 0 !important;
     margin-bottom:8px !important;
@@ -668,6 +678,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
     font-weight: 600;
     overflow: hidden;
     font-family: 'Poppins', sans-serif;
+    text-align: center;
 }
 .albumn-list > a:hover figcaption,
 .albumn-list > a:active figcaption,

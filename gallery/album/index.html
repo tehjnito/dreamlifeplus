@@ -48,10 +48,10 @@
             </span>
         </nav>
         <section id="body-wrapper" class="row">
-            <secion id="page-big-banner" style="background-image:url('{{GalleryInfo.BannerImage}}')">
+            <secion id="page-big-banner" style="background-image:url('{{AlbumInfo.BannerImage}}')">
                 <span class="tint fluid-absolute"></span>
                 <span class="fluid-absolute">
-                    <h1 class="accent_underline u-white">{{GalleryInfo.Name}}</h1>
+                    <h1 class="accent_underline u-white">{{AlbumInfo.Name}}</h1>
                     <hr>
                 </span>
             </secion>
@@ -66,9 +66,9 @@
                 </section>
                 <section class="row no-padding">
                     <span class="clearfix col-xs-12 no-padding">
-                        <h3 class="text-left">Images</h3>
+                        <h3 class="text-left">Images<small>: ({{AlbumImages.length}})</small></h3>
                         <section class="albumn-list close-fit">
-                            <span ng-repeat="x in AlbumImages track by $index" href="{{x.Image}}" class="col-xs-12 col-sm-6 col-md-4">
+                            <span ng-repeat="x in AlbumImages" href="{{x.Image}}" class="col-xs-12 col-sm-6 col-md-4">
                                 <span data-tehj-gallery="albumImage" data-tehj-img-url="{{x.Image}}">
                                     <figure style="background-image: url('{{x.Image}}')"></figure>
                                 </span>
