@@ -28,7 +28,6 @@
                 <header></header>
                 <ul class="nav nav-pills nav-stacked">
                     <li class="active"><a data-toggle="tab" href="#albums">Albums</a></li>
-                    <li><a data-toggle="tab" href="#newgallery">New Album</a></li>
                     <li><a data-toggle="tab" href="#homepage">Home Page</a></li>
                 </ul>
             </section>
@@ -38,9 +37,9 @@
                         <hgroup>
                             <span class="col-xs-12">
                                 <h3 class="pull-left">Albums</h3>
-                                <a class="btn btn-link pull-right"><i class="fa fa-fw fa-lg fa-plus-circle"></i>New Album</a>
+                                <a class="btn btn-link pull-right" data-toggle="modal" data-target="#m_NewAlbum"><i class="fa fa-fw fa-lg fa-plus-circle"></i>New Album</a>
                             </span>
-                            <hr>
+                            <hr class="clearfix">
                         </hgroup>
                         <span class="col-xs-12">
                             <strong>Total Albums:</strong>&nbsp;{{Albums.length}}
@@ -64,9 +63,9 @@
                                         <i class="fa fa-fw fa-long-arrow-left"></i>&nbsp;Edit Album
                                         <small>&nbsp;|&nbsp;{{CurrentEditAlbum.Name}}</small>
                                     </h3>
-                                    <a class="btn btn-link pull-right"><i class="fa fa-fw fa-lg fa-trash"></i>Delete</a>
+                                    <a class="btn btn-link pull-right" ng-click="deleteAlbum()"><i class="fa fa-fw fa-lg fa-trash"></i>Delete</a>
                                 </span>
-                                <hr>
+                                <hr class="clearfix">
                             </hgroup>
                             <span class="col-xs-12">
                                 <span class="col-xs-12 col-md-6">
@@ -95,7 +94,7 @@
                             </span>
                             <span class="col-xs-12 well">
                                 <ul id="EditGalleryList">
-                                    <p>Length: {{AlbumImages.length}}</p>
+                                    <p>Images: {{AlbumImages.length}}</p>
                                     <li ng-repeat="x in AlbumImages track by $index" class="col-xs-6 col-md-4 col-lg-3" data-toggle="dropdown">
                                         <span>
                                             <header class="dropdown">
@@ -111,22 +110,75 @@
                             </span>
                         </div>
                     </div>
-                    <div id="newgallery" class="tab-pane fade">
+                    <div id="homepage" ng-controller="ctrl_admin_homepage" class="tab-pane fade">
                         <hgroup>
-                            <h3>New Gallery</h3>
-                            <hr>
+                            <span class="col-xs-12">
+                                <h3 class="pull-left">Home Page</h3>
+                            </span>
+                            <hr class="clearfix">
                         </hgroup>
-                    </div>
-                    <div id="homepage" class="tab-pane fade">
-                        <h3>Menu 2</h3>
-                        <p>Some content in menu 2.</p>
+                        <span class="col-xs-12">
+                            <span class="col-xs-12 col-md-6">
+                                <div class="form-group">
+                                    <label class="control-label">Add Banner Photos</label>
+                                    <div class="input-group">
+                                        <input id="inp_heroNewImages" ng-model="hero.NewImages" type="file" ng-model="addImages" onchange="angular.element(this).scope().readHeroImages()" multiple accept="image/*" class="form-control">
+                                        <span class="input-group-btn">
+                                            <button class="btn btn-pink" ng-click="uploadHeroImages()" type="button">Upload</button>
+                                        </span>
+                                    </div>
+                                </div>
+                            </span>
+                            <span class="clearfix col-xs-12 well">
+                                <ul id="EditGalleryList">
+                                    <p>Home Page Banner Images: {{HeroImages.length}}</p>
+                                    <li ng-repeat="x in HeroImages track by $index" class="col-xs-6 col-md-4 col-lg-3" data-toggle="dropdown">
+                                        <span>
+                                            <header class="dropdown">
+                                                <button class="btn btn-link pull-right no-padding dropdown-toggle" data-toggle="dropdown"><i class="fa fa-fw fa-ellipsis-h"></i></button>
+                                                <ul class="dropdown-menu dropdown-menu-right">
+                                                    <li><a ng-click="removeFromHero(x)" href="#">Remove</a></li>
+                                                </ul>
+                                            </header>
+                                            <figure style="background-image: url('{{x.Image}}')"></figure>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </span>
+                        </span>
+                        <span class="col-xs-12">
+                            <h5 class="pull-left">Features</h5>
+                            <hr class="clearfix">
+                        </span>
+                        <span class="col-xs-12">
+                            <span ng-repeat="x in Featured track by $index" class="col-xs-6 col-md-4 col-lg-3">
+                                <span class="col-xs-12 well">
+                                    <h6>{{x.$id}}</h6>
+                                    <ul id="EditGalleryList">
+                                        <li class="col-xs-12">
+                                            <span>
+                                                <figure style="background-image: url('{{x.Image}}')"></figure>
+                                            </span>
+                                        </li>
+                                    </ul>
+                                    <div class="form-group">
+                                        <div class="input-group">
+                                            <input id="inp_features{{x.$id}}" type="file" ng-model="addImages" accept="image/*" class="form-control">
+                                            <span class="input-group-btn">
+                                                <button class="btn btn-pink" ng-click="featuresUpload(x.$id)" type="button">Change</button>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </span>
+                            </span>
+                        </span>
                     </div>
                 </div>
             </section>
         </section>
 
         <!-- Modal -->
-        <div id="m_NewAlbum" class="modal fade" role="dialog">
+        <div ng-controller="ctrl_admin_albums" id="m_NewAlbum" class="modal fade" role="dialog">
             <div class="modal-dialog">
 
                 <!-- Modal content-->
@@ -136,7 +188,31 @@
                         <h4 class="modal-title">Add New Album</h4>
                     </div>
                     <div class="modal-body">
-                        <p>Some text in the modal.</p>
+                        <form ng-submit="submitNewAlbum(newAlbum)" class="form-horizontal">
+                            <div class="form-group">
+                                <label class="control-label col-sm-2" for="name">Album Name:</label>
+                                <div class="col-sm-10">
+                                    <input required type="text" maxlength="100" ng-model="newAlbum.name" class="form-control" id="name" placeholder="ex: Jane's 18th Birthday">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-2" for="inp_na_display">Display Image:</label>
+                                <div class="col-sm-10"> 
+                                    <input required type="file" ng-model="newAlbum.display" accept="image/*" class="form-control" onchange="angular.element(this).scope().newAlbumDisplayUpload()" id="inp_na_display">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-2" for="inp_na_banner">Banner Image:</label>
+                                <div class="col-sm-10"> 
+                                    <input required type="file" accept="image/*" ng-model="newAlbum.banner" class="form-control" onchange="angular.element(this).scope().newAlbumBannerUpload()" id="inp_na_banner">
+                                </div>
+                            </div>
+                            <div class="form-group"> 
+                                <div class="col-sm-offset-2 col-sm-10">
+                                    <button type="submit" class="btn btn-pink pull-right">Submit</button>
+                                </div>
+                            </div>
+                        </form>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
