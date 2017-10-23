@@ -29,6 +29,7 @@
                 <ul class="nav nav-pills nav-stacked">
                     <li class="active"><a data-toggle="tab" href="#albums">Albums</a></li>
                     <li><a data-toggle="tab" href="#homepage">Home Page</a></li>
+                    <li><a data-toggle="tab" href="#gallerypage">Gallery Page</a></li>
                 </ul>
             </section>
             <section id="Content-Panel" class="col-xs-push-2 col-xs-10 col-md-push-2 col-md-10">
@@ -171,6 +172,28 @@
                                     </div>
                                 </span>
                             </span>
+                        </span>
+                    </div>
+                    <div id="gallerypage" ng-controller="ctrl_admin_gallerypage" class="tab-pane fade">
+                        <hgroup>
+                            <span class="col-xs-12">
+                                <h3 class="pull-left">Gallery Page</h3>
+                            </span>
+                            <hr class="clearfix">
+                        </hgroup>
+                        <span class="col-xs-12">
+                            <div class="form-group">
+                                <label class="control-label">Current Banner Photo</label>
+                                <section id="previewBanner" style="background-image:url({{BannerImage.Image}})"></section>
+                                <div class="col-xs-12 col-md-4">
+                                    <div class="input-group">
+                                        <input id="inp_bannerPhoto" type="file" accept="image/*" class="form-control">
+                                        <span class="input-group-btn">
+                                            <button class="btn btn-pink" ng-click="bannerUpload()" type="button">Change</button>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
                         </span>
                     </div>
                 </div>

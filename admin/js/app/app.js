@@ -360,3 +360,39 @@ appAdmin.controller('ctrl_admin_homepage', function($scope, $firebaseObject, $fi
     };
 
 });
+
+appAdmin.controller('ctrl_admin_gallerypage', function($scope, $firebaseObject, $firebaseArray, $firebaseStorage){
+    $scope.BannerImage = $firebaseObject(firebase.database().ref("GalleryPage/Banner"));
+
+    $scope.bannerUpload = function(){
+        var tempImageName = "GalleryPageBanner";
+        var storageRef = $firebaseStorage(firebase.storage().ref("photos/staticpages/" + tempImageName));
+        var file = document.querySelector('input[type=file]#inp_bannerPhoto').files[0];
+        var bannerRef = $firebaseObject(firebase.database().ref("GalleryPage/Banner"));
+
+        if(file == null){
+            alert("No Image Selected");
+            return;
+        }
+
+        
+        var uploadTask = storageRef.$put(file, {contentType: file.type});
+        uploadTask.$complete(function(snapshot){
+            bannerRef.$loaded().then(function(){
+                bannerRef.Image = snapshot.downloadURL;
+                bannerRef.$save().then(function(ref) {
+                    // ref.key === AlbumInfo.$id; // true
+                }, function(error) {
+                console.log("Error:", error);
+            })
+            });
+        });
+        uploadTask.$error(function(error){
+            alert("Failed To Update Banner");
+        });
+        uploadTask.$progress(function(snapshot) {
+            var percentUploaded = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+                console.log(percentUploaded);
+        });
+    }
+});

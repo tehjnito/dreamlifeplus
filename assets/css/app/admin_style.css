@@ -68,3 +68,14 @@
     background-position: center;
     background-repeat: no-repeat;
 }
+
+#previewBanner{
+    position:relative;
+    clear:both;
+    width:96%;height:250px;
+    display: block;
+    margin:0 auto 30px auto;
+    background-size: cover;
+    background-position: center;
+    background-color:#000;
+}

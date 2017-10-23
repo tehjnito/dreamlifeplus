@@ -20,7 +20,7 @@ app.controller('ctrl_homepage', function($scope, $firebaseObject, $firebaseArray
 });
 
 app.controller('ctrl_gallerypage', function($scope, $firebaseObject, $firebaseArray){
-    var bannerRef = firebase.database().ref("GalleryPage/BannerImage");
+    var bannerRef = firebase.database().ref("GalleryPage/Banner");
     $scope.BannerImage = $firebaseObject(bannerRef);
 
     var albumListRef = firebase.database().ref("Albums");
